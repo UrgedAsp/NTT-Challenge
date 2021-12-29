@@ -1,0 +1,15 @@
+.container-header{
+    padding: 0 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    box-shadow: 4px 2px 6px 0 grey;
+}
+.dark-mode{
+    display: flex;
+    align-items: center;
+}
+.dark-mode h5{
+    margin-left: 8px;
+}
