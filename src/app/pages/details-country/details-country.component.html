@@ -1,1 +1,54 @@
-<p>details-country works!</p>
+<div class="container-details">
+    <div class="header">
+        <button [routerLink]="['/']">
+            <icon-arrow-back></icon-arrow-back>
+            <p>Back</p>
+        </button>
+    </div>
+    <div class="alert-info" *ngIf="!country;else containerCountry">
+        Wait please...
+    </div>
+
+    <ng-template #containerCountry>
+        <div class="country">
+            <div class="img">
+                <img [src]="country.flags.png" [alt]="country.flags.png">
+            </div>
+            <div class="details">
+                <h2>{{ country.name }}</h2>
+                <div class="data">
+                    <div class="left">
+                        <p><b>{{ 'Native Name: ' }}</b>{{ country.languages[0].nativeName | titlecase}}</p>
+                        <p><b>{{ 'Population: ' }}</b>{{ country.population }}</p>
+                        <p><b>{{ 'Region: ' }}</b>{{ country.region }}</p>
+                        <p><b>{{ 'Sub Region: ' }}</b>{{ country.subregion }}</p>
+                        <p><b>{{ 'Capital: ' }}</b>{{ country.capital }}</p>
+                    </div>
+                    <div class="rigth">
+                        <p><b>{{ 'Top Level Domain: ' }}</b>{{ country.topLevelDomain[0] }}</p>
+                        <p>
+                            <b>{{ 'Currencies: ' }}</b>
+                            <span *ngFor="let item of country.currencies">
+                                {{item.name}}
+                            </span>
+                        </p>
+                        <p>
+                            <b>{{ 'Languages: ' }}</b>
+                            <span *ngFor="let item of country.languages">
+                                {{item.name}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="border-countries" *ngIf="country.borders">
+                    <p>
+                        <b>{{ 'Border Countries: ' }}</b>
+                        <button [routerLink]="['/pais/'+item]" *ngFor="let item of country.borders">
+                            {{ item }}
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

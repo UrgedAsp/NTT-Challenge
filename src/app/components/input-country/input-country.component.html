@@ -1,1 +1,6 @@
-<p>input-country works!</p>
+<div class="input-container">
+    <icon-search></icon-search>
+    <form (ngSubmit)="search()" autocomplete="off">
+        <input type="text" name="termino" [(ngModel)]="termino" placeholder="Search for a country..." onkeypress="return /[a-z]/i.test(event.key)">
+    </form>
+</div>

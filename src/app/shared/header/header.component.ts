@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   }
 
   darkMode(){
-    console.log('DarkMode Clicked');
+    console.log('Por motivos de viaje no pude implementarlo :(');
   }
 
 }

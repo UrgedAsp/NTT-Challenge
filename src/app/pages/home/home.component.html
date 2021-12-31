@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="container-home">
+    <div class="filters">
+        <app-input-country (country)="searchCountry($event)"></app-input-country>
+        <app-region-country (region)="searchRegion($event)"></app-region-country>
+    </div>
+    <div class="cards">
+        <app-card-country *ngFor="let country of arrayCountries" [country]="country" (imgClicked)="openDetails($event)"></app-card-country>
+    </div>
+</div>

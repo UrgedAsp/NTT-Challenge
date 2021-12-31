@@ -1,0 +1,32 @@
+.container-card{
+    width: 280px;
+    height: auto;
+    box-shadow: 0px 6px 5px 0px #d1c7c7;
+    border-radius: 8px;
+}
+.img{
+    height: 150px;
+    width: 100%;
+}
+.img img{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 14px 40px 14px;
+}
+.details .header-details{
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+.details .content-details{
+    font-weight: 400;
+}
+.details .content-details p{
+    padding-bottom: 2px;
+}

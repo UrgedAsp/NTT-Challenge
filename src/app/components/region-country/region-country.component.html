@@ -1,0 +1,4 @@
+<select [ngModel]="regionSelected" (ngModelChange)="onChange($event)">
+    <option value="-">Filter by Region</option>
+    <option [value]="region" *ngFor="let region of regions">{{ region }}</option>
+</select>

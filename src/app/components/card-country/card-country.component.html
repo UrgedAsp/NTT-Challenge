@@ -1,1 +1,15 @@
-<p>card-country works!</p>
+<div class="container-card">
+    <div class="img">
+            <img [src]="country.flags.png" [alt]="country.flags.png" (click)="detailsCountry(country.alpha2Code)">
+    </div>
+    <div class="details">
+        <div class="header-details">
+            <h2>{{ country.name }}</h2>
+        </div>
+        <div class="content-details">
+            <p><b>{{'Population: '}}</b> {{ country.population }}</p>
+            <p><b>{{'Region: '}}</b> {{ country.region }}</p>
+            <p><b>{{'Capital: '}}</b> {{ country.capital }}</p>
+        </div>
+    </div>
+</div>

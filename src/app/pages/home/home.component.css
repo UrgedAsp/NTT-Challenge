@@ -1,0 +1,20 @@
+.container-home{
+    padding: 0 40px 0 40px;
+}
+.cards{
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+@media (max-width: 370px) {
+    .container-home{
+        padding: 0 5px 0 5px;
+    }
+}
